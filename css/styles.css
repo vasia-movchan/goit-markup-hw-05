@@ -105,6 +105,9 @@ ul {
    display: flex;
 }
 
+.nav-list-item {
+}
+
 .header-contact {
    display: flex;
    align-items: center;
@@ -117,12 +120,16 @@ ul {
 
 .nav-link {
    display: block;
+   position: relative;
    padding-top: 32px;
    padding-bottom: 31px;
    font-weight: 500;
    line-height: calc(16 / 14);
    letter-spacing: 0.02em;
    color: var(--title-text-color);
+   transition-property: color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list-item:not(:last-child) {
    margin-right: 50px;
@@ -149,6 +156,9 @@ ul {
    line-height: calc(16 / 14);
    letter-spacing: 0.02em;
    color: var(--content-text-color);
+   transition-property: color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-icon {
@@ -158,6 +168,17 @@ ul {
 
 .current {
    color: var(--text-hover-color);
+}
+
+.current::after {
+   content: '';
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   margin-top: 28px;
+   background-color: var(--text-hover-color);
+   border-radius: 2px;
 }
 
 /* -------------------HERO------------------ */
@@ -201,6 +222,9 @@ ul {
    text-align: center;
    letter-spacing: 0.06em;
    color: var(--btn-text-first-color);
+   transition-property: background-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:focus,
@@ -361,6 +385,8 @@ ul {
    border-radius: 50%;
    background-color: var(--bg-color);
    color: var(--team-icon-color);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -412,6 +438,7 @@ ul {
    border: 1px solid var(--clients-item);
    border-radius: 4px;
    color: var(--clients-item);
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
@@ -454,6 +481,9 @@ ul {
    border-radius: 50%;
    background-color: var(--join-icon-bg-color);
    color: var(--team-icon-color);
+   transition-property: background-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-list-link:hover,
