@@ -23,6 +23,7 @@
    --clients-item-hover: #2196f3;
    --footer-bg-color: #2f303a;
    --join-icon-bg-color: rgba(255, 255, 255, 0.1);
+   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -597,6 +598,8 @@ ul {
    text-align: center;
    letter-spacing: 0.03em;
    color: var(--title-text-color);
+   transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
+      box-shadow 250ms var(--cubic);
 }
 
 .filter-btn:hover,
