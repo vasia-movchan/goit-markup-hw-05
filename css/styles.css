@@ -639,6 +639,10 @@ ul {
    border-top-color: transparent;
 }
 
+.portfolio-item {
+   transition: box-shadow 250ms var(--cubic);
+}
+
 .portfolio-item:hover {
    display: block;
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
